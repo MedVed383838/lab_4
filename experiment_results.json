@@ -1,0 +1,144 @@
+{
+  "model_name": "Soft Voting: LogisticRegression + RandomForest + ExtraTrees",
+  "roc_auc": 0.843333,
+  "accuracy": 0.8,
+  "precision": 0.804878,
+  "recall": 0.942857,
+  "f1": 0.868421,
+  "random_seed": 42,
+  "split": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "stratify": true,
+    "train_rows": 800,
+    "test_rows": 200
+  },
+  "experiments": [
+    {
+      "model": "LogReg, масштабирование (без новых признаков)",
+      "cv_roc_auc_train": 0.7726,
+      "test_roc_auc": 0.8086,
+      "accuracy": 0.77,
+      "precision": 0.8013,
+      "recall": 0.8929,
+      "f1": 0.8446
+    },
+    {
+      "model": "LogReg + one-hot + новые признаки",
+      "cv_roc_auc_train": 0.7745,
+      "test_roc_auc": 0.8457,
+      "accuracy": 0.795,
+      "precision": 0.8278,
+      "recall": 0.8929,
+      "f1": 0.8591
+    },
+    {
+      "model": "Random Forest (сырые признаки)",
+      "cv_roc_auc_train": 0.7779,
+      "test_roc_auc": 0.8279,
+      "accuracy": 0.795,
+      "precision": 0.8037,
+      "recall": 0.9357,
+      "f1": 0.8647
+    },
+    {
+      "model": "Random Forest + новые признаки",
+      "cv_roc_auc_train": 0.7834,
+      "test_roc_auc": 0.8221,
+      "accuracy": 0.785,
+      "precision": 0.7904,
+      "recall": 0.9429,
+      "f1": 0.8599
+    },
+    {
+      "model": "Extra Trees + новые признаки",
+      "cv_roc_auc_train": 0.7873,
+      "test_roc_auc": 0.8292,
+      "accuracy": 0.79,
+      "precision": 0.7988,
+      "recall": 0.9357,
+      "f1": 0.8618
+    },
+    {
+      "model": "Gradient Boosting + новые признаки",
+      "cv_roc_auc_train": 0.7743,
+      "test_roc_auc": 0.8396,
+      "accuracy": 0.79,
+      "precision": 0.8182,
+      "recall": 0.9,
+      "f1": 0.8571
+    },
+    {
+      "model": "HistGradientBoosting (сырые признаки)",
+      "cv_roc_auc_train": 0.767,
+      "test_roc_auc": 0.8265,
+      "accuracy": 0.8,
+      "precision": 0.8247,
+      "recall": 0.9071,
+      "f1": 0.8639
+    },
+    {
+      "model": "AdaBoost (сырые признаки)",
+      "cv_roc_auc_train": 0.7652,
+      "test_roc_auc": 0.8214,
+      "accuracy": 0.775,
+      "precision": 0.795,
+      "recall": 0.9143,
+      "f1": 0.8505
+    },
+    {
+      "model": "MLP (32), one-hot, ранняя остановка (сырые признаки)",
+      "cv_roc_auc_train": 0.6379,
+      "test_roc_auc": 0.6902,
+      "accuracy": 0.71,
+      "precision": 0.7071,
+      "recall": 1.0,
+      "f1": 0.8284
+    },
+    {
+      "model": "MLP (16), alpha=3, без ранней остановки (новые признаки)",
+      "cv_roc_auc_train": 0.775,
+      "test_roc_auc": 0.8439,
+      "accuracy": 0.785,
+      "precision": 0.8299,
+      "recall": 0.8714,
+      "f1": 0.8502
+    },
+    {
+      "model": "Voting: LogReg + RF (новые признаки)",
+      "cv_roc_auc_train": 0.7884,
+      "test_roc_auc": 0.8463,
+      "accuracy": 0.795,
+      "precision": 0.8113,
+      "recall": 0.9214,
+      "f1": 0.8629
+    },
+    {
+      "model": "Voting: LogReg + RF + ET + GB (новые признаки)",
+      "cv_roc_auc_train": 0.7895,
+      "test_roc_auc": 0.8444,
+      "accuracy": 0.775,
+      "precision": 0.795,
+      "recall": 0.9143,
+      "f1": 0.8505
+    },
+    {
+      "model": "Stacking: LogReg + RF + ET + GB (новые признаки)",
+      "cv_roc_auc_train": 0.7889,
+      "test_roc_auc": 0.8424,
+      "accuracy": 0.795,
+      "precision": 0.8194,
+      "recall": 0.9071,
+      "f1": 0.861
+    },
+    {
+      "model": "Voting: LogReg + RF + ET (выбрана, новые признаки)",
+      "cv_roc_auc_train": 0.7905,
+      "test_roc_auc": 0.8433,
+      "accuracy": 0.8,
+      "precision": 0.8049,
+      "recall": 0.9429,
+      "f1": 0.8684
+    }
+  ]
+}
